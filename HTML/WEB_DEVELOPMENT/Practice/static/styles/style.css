@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100&display=swap');
+
+
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.divider {
+    border-bottom: 1px solid grey;
+  }
+
+.tablebackground{
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-family: 'Hahmlet', serif;
+}
+
+.tablecontent{
+    background-color: white;
+    color:black;
+    text-align: center;
+    font-family: 'Hahmlet', serif;
+}
