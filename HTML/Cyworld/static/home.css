@@ -1,27 +1,4 @@
-.column2{
-    flex:2;
 
-    display:flex;
-    flex-direction:column;
-}
-
-.column2_textbox{
-    flex:0.1;
-
-    display:flex;
-    margin-top:4px;
-}
-.column2_text1{
-    flex:1;
-}
-
-.column2_text2{
-    flex:1;
-
-    font-size:0.8em;
-    text-align: right;
-    padding-top: 3px;
-}
 
 .column2_content{
     flex:2;
@@ -38,6 +15,12 @@
 
 .column2_room{
     flex:7;
+}
+
+.column2_room_gif{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .column2_news{
@@ -95,3 +78,6 @@
     margin-bottom:3px;
 }
 
+.miniroom_gif{
+    flex:0;
+}
