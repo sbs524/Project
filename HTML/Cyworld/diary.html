@@ -66,23 +66,45 @@
                     <div class="content_container">
                         <div class="content_title">2021.08.09 월 12:10</div>
                         <div class="content_content">
-                            오늘은<br>오늘은<br>오늘은<br>today<br>today<br>
+                            모각코 1일차다.<br>사이트를 만들 수 있다는 생각에
+                            <br>설레기도 하고 또 열심히 해야겠다는 생각을 했다.
+                            <br>사람은 항상 초심을 되새겨야 한다는데
+                            <br>나도 자만하지 않도록 초심을 되새겨야겠다.
+                            <br>(자만할 실력이 쌓인다면..ㅎㅎ)
                         </div>
                     </div>
                     <div class="content_container">
-                        <div class="content_title">2021.08.09 월 12:10</div>
+                        <div class="content_title">2021.08.16 월 12:10</div>
                         <div class="content_content">
-                            오늘은<br>오늘은<br>오늘은<br>today<br>today<br>
+                            모각코 6일차다.<br>첫주는 적응하는데 조~금 어려웠지만
+                            <br>나름 혼자 찾아보면서
+                            <br>홈페이지를 만들었는데
+                            <br>어려웠지만 꽤 재미있었고
+                            <br>보람찼었다.
                         </div>
                     </div>
                     <div class="content_container">
-                        <div class="content_title">2021.08.09 월 12:10</div>
+                        <div class="content_title">2021.08.23 월 12:10</div>
                         <div class="content_content">
-                            오늘은<br>오늘은<br>오늘은<br>today<br>today<br>
+                            모각코 11일차!<br>html을 잠깐 만만하게 볼뻔했는데
+                            <br>저번주에 호되게 당했다ㅜㅜ
+                            <br>진도 따라잡기 급급했고 어려웠지만
+                            <br>결국 만들었다.
+                            <br>이번주가 마지막이니만큼
+                            <br>더 열심히 만들어야겠다!
+
                         </div>
                     </div>
 
-                    <a class="content_secret" href="#"><i class="fas fa-lock"></i> 보노의 비밀일기</a>
+                    <div class="secret_container">
+                      <button class="secret" onclick="getTextFile()">
+                        <i class="fas fa-lock"></i> 보노의 비밀일기
+                      </button>
+                    </div>
+                    <div class="content_container" id="secret_box">
+                      <div class="content_title">수달의 비밀 일기</div>
+                      <div class="content_content" id="secret_diary"></div>
+                    </div>
 
                 </div>
             </div>
@@ -98,5 +120,28 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function getTextFile()
+      {
+        var input = document.createElement("input");
+        input.type = "file";
+        input.accept = "text/plain";
+        input.onchange = function (event) {
+          processFile(event.target.files[0]);
+        };
+        input.click();
+      }
+
+      function processFile(file) {
+        var reader = new FileReader();
+        reader.readAsText(file, "utf-8");
+
+        reader.onload = function () {
+          document.getElementById("secret_diary").innerText = reader.result;
+          document.getElementById("secret_box").style.display = "block";
+        };
+      }
+    </script>
   </body>
 </html>
